@@ -1,0 +1,20 @@
+<%- include partials/header-%>
+
+<h1>Home</h1>
+
+<p>
+  <%= contHome %>
+</p>
+
+
+<% blogFinal.forEach(function(blog){ %>
+
+<h1> <%= blog.bodyTittle %> </h1>
+<p> <%= blog.bodyBlog.slice(0, 100)+'...' %>
+<a href="posts/<%= blog.bodyTittle %>">Read More</a>
+</p>
+
+<% }); %>
+
+
+<%- include partials/footer-%>
